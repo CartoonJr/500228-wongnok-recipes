@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "22744022-3d21-4a19-9c2b-99f1e7dba39c",
+		"name": "wongnok",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45033594",
+		"_collection_link": "https://toon-8839861.postman.co/workspace/Toon's-Workspace~833303b0-8d93-4938-8a9e-4bbd9ea6e8a6/collection/45033594-22744022-3d21-4a19-9c2b-99f1e7dba39c?action=share&source=collection_link&creator=45033594"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"testuser\",\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"secret123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"secret123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ratings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"recipe_id\": 2,\r\n  \"user_id\": 6,\r\n  \"score\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/ratings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ratings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recipes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"recipe_id\": 2,\r\n  \"user_id\": 6,\r\n  \"score\": 4\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/recipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recipes/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/recipes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recipes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recipes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"ข้าวผัดกุ้ง\",\r\n  \"image_url\": \"https://example.com/image.jpg\",\r\n  \"ingredients\": \"ข้าวสวย, กุ้ง, ไข่, น้ำปลา\",\r\n  \"steps\": \"1. เจียวไข่\\n2. ใส่กุ้ง\\n3. ใส่ข้าว\\n4. ปรุงรส\",\r\n  \"duration\": \"20\",\r\n  \"difficulty\": \"ง่าย\",\r\n  \"user_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/recipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recipes/:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"ข้าวผัดหมู\",\r\n  \"image_url\": \"https://example.com/new-image.jpg\",\r\n  \"ingredients\": \"ข้าว, หมู, ไข่, น้ำปลา\",\r\n  \"steps\": \"1. เจียวไข่\\n2. ใส่หมู\\n3. ใส่ข้าว\\n4. ปรุงรส\",\r\n  \"duration\": \"25\",\r\n  \"difficulty\": \"ปานกลาง\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/recipes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recipes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recipes/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"ข้าวผัดหมู\",\r\n  \"image_url\": \"https://example.com/new-image.jpg\",\r\n  \"ingredients\": \"ข้าว, หมู, ไข่, น้ำปลา\",\r\n  \"steps\": \"1. เจียวไข่\\n2. ใส่หมู\\n3. ใส่ข้าว\\n4. ปรุงรส\",\r\n  \"duration\": \"25\",\r\n  \"difficulty\": \"ปานกลาง\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/recipes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recipes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ratings/:recipe_id/:user_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"recipe_id\": 2,\r\n  \"user_id\": 6,\r\n  \"score\": 4\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/ratings/1/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ratings",
+						"1",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
