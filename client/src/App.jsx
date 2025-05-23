@@ -32,7 +32,7 @@ export default function App() {
       return storedUser ? JSON.parse(storedUser) : null;
     } catch (error) {
       console.error("Error parsing stored user:", error);
-      localStorage.removeItem('user'); // ล้างข้อมูลที่เสียหายออกจาก localStorage
+      localStorage.removeItem('user');
       return null;
     }
   });
