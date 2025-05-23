@@ -2,11 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Navbar = ({ user, setUser, myRecipeCount }) => {
-  const handleLogout = () => {
-    localStorage.removeItem('user');
-    setUser(null);
-  };
+const Navbar = ({ user, onLogout, myRecipeCount }) => {
 
   return (
     <nav className="navbar">
@@ -24,7 +20,7 @@ const Navbar = ({ user, setUser, myRecipeCount }) => {
         ) : (
           <>
             <span className="navbar-user">👋 {user.username}</span>
-            <button className="btn-logout" onClick={handleLogout}>ออกจากระบบ</button>
+            <button className="btn-logout" onClick={onLogout}>ออกจากระบบ</button>
           </>
         )}
       </div>

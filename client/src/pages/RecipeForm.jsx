@@ -6,17 +6,17 @@ import CreatableSelect from "react-select/creatable"; // สำหรับ Drop
 
 // ตัวเลือกเริ่มต้นสำหรับระดับความยาก
 const DIFFICULTY_OPTIONS = [
-  { value: "Easy", label: "ง่าย" },
-  { value: "Medium", label: "ปานกลาง" },
-  { value: "Hard", label: "ยาก" },
+  { value: "ง่าย", label: "ง่าย" },
+  { value: "ปานกลาง", label: "ปานกลาง" },
+  { value: "ยาก", label: "ยาก" },
 ];
 
 // ตัวเลือกสำหรับระยะเวลา
 const DURATION_OPTIONS = [
-  { value: "5-10 mins", label: "5-10 นาที" },
-  { value: "11-30 mins", label: "11-30 นาที" },
-  { value: "31-60 mins", label: "31-60 นาที" },
-  { value: "60+ mins", label: "60 นาทีขึ้นไป" },
+  { value: "5-10 นาที", label: "5-10 นาที" },
+  { value: "11-30 นาที", label: "11-30 นาที" },
+  { value: "31-60 นาที", label: "31-60 นาที" },
+  { value: "60 นาทีขึ้นไป", label: "60 นาทีขึ้นไป" },
 ];
 
 // ค่าเริ่มต้นสำหรับฟอร์ม
