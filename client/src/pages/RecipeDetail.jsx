@@ -13,7 +13,7 @@ const formatDate = (isoDateString) => {
     const date = new Date(isoDateString);
     return date.toLocaleDateString("th-TH", {
       year: "numeric",
-      month: "long", // เปลี่ยนเป็น long เพื่อให้อ่านง่ายขึ้น
+      month: "long",
       day: "numeric",
     });
   } catch (error) {
@@ -69,7 +69,6 @@ const RecipeDetail = ({ user, apiBaseUrl }) => {
             setHasRated(false);
           }
         } else {
-          // ไม่ใช่ error ร้ายแรง อาจจะแค่ไม่เคยให้คะแนน
           console.warn(`ไม่สามารถโหลดคะแนนเดิมได้: ${ratingResponse.status}`);
           setCurrentRating("");
           setHasRated(false);

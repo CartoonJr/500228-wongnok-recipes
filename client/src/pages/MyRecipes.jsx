@@ -97,7 +97,7 @@ const MyRecipes = ({ recipes = [], user, fetchRecipes, apiBaseUrl }) => {
               <div className="detail-actions" style={{ marginTop: '0.75rem', display: 'flex', gap: '0.5rem', justifyContent: 'space-between' }}>
                 <button
                   onClick={() => navigate(`/recipe/${recipe.recipe_id}`)}
-                  className="btn-view" // Class ใหม่สำหรับปุ่มดู
+                  className="btn-view"
                   title="ดูรายละเอียดสูตร"
                 >
                   👁️ ดู
@@ -111,8 +111,8 @@ const MyRecipes = ({ recipes = [], user, fetchRecipes, apiBaseUrl }) => {
                 </button>
                 <button
                   onClick={() => handleDelete(recipe.recipe_id)}
-                  className="btn-delete" // ใช้ class ที่ถูกต้อง
-                  disabled={deletingId === recipe.recipe_id} // Disable ปุ่มขณะกำลังลบสูตรนี้
+                  className="btn-delete"
+                  disabled={deletingId === recipe.recipe_id}
                   title="ลบสูตร"
                 >
                   {deletingId === recipe.recipe_id ? 'กำลังลบ...' : '🗑️ ลบ'}

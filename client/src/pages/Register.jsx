@@ -45,9 +45,7 @@ const Register = ({ apiBaseUrl }) => {
       setIsSubmitting(false);
       return;
     }
-    // สามารถเพิ่มการ validate email format ได้ถ้าต้องการ
 
-    // เตรียมข้อมูลที่จะส่ง (ไม่ต้องส่ง confirmPassword)
     const payload = {
         username: form.username,
         email: form.email,
@@ -72,7 +70,7 @@ const Register = ({ apiBaseUrl }) => {
       console.error('Registration error:', err);
       setError('เกิดข้อผิดพลาดในการเชื่อมต่อกับเซิร์ฟเวอร์');
     } finally {
-      setIsSubmitting(false); // สิ้นสุดการ submit
+      setIsSubmitting(false);
     }
   };
 
@@ -116,7 +114,7 @@ const Register = ({ apiBaseUrl }) => {
             value={form.password}
             onChange={handleChange}
             required
-            minLength={6} // HTML5 validation
+            minLength={6}
             disabled={isSubmitting}
           />
         </div>

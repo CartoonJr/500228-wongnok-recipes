@@ -77,9 +77,9 @@ const Login = ({ setUser, apiBaseUrl }) => {
             placeholder="กรอกอีเมลของคุณ"
             value={form.email}
             onChange={handleChange}
-            required // HTML5 validation
+            required
             aria-describedby="email-error"
-            disabled={isSubmitting} // disable ขณะกำลัง submit
+            disabled={isSubmitting}
           />
         </div>
         <div>
@@ -91,9 +91,9 @@ const Login = ({ setUser, apiBaseUrl }) => {
             placeholder="กรอกรหัสผ่านของคุณ"
             value={form.password}
             onChange={handleChange}
-            required // HTML5 validation
+            required
             aria-describedby="password-error"
-            disabled={isSubmitting} // disable ขณะกำลัง submit
+            disabled={isSubmitting}
           />
         </div>
         {/* แสดงข้อความข้อผิดพลาด (ถ้ามี) */}

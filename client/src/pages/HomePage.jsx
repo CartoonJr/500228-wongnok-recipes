@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 // ค่าคงที่สำหรับรูปภาพ Placeholder
 const PLACEHOLDER_IMAGE_URL = 'https://placehold.co/300x180/E2E8F0/A0AEC0?text=ไม่มีรูปภาพ'; // ปรับปรุง Placeholder
 
-// Utility function สำหรับจัดรูปแบบวันที่ (สามารถย้ายไปไฟล์ helpers ได้ถ้าใช้หลายที่)
 const formatDate = (isoDateString) => {
   if (!isoDateString) return 'ไม่ระบุวันที่';
   try {
@@ -191,10 +190,6 @@ const HomePage = ({ recipes = [], isLoading, error }) => { // ให้ recipes 
                     ({recipe.review_count > 0 ? `${recipe.review_count} รีวิว` : 'ยังไม่มีรีวิว'})
                   </span>
                 </p>
-                {/* <p className="recipe-review">
-                  {recipe.review_count > 0 ? `${recipe.review_count} รีวิว` : 'ยังไม่มีรีวิว'}
-                </p> */}
-                {/* ลิงก์ไปยังหน้ารายละเอียดสูตรอาหาร */}
                 <Link to={`/recipe/${recipe.recipe_id}`} className="btn-detail" style={{width: '85%', marginTop: '0.5rem'}}>
                   ดูรายละเอียด
                 </Link>

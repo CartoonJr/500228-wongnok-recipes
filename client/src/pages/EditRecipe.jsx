@@ -170,7 +170,7 @@ const EditRecipe = ({ user, fetchRecipes, apiBaseUrl }) => {
           <input
             id="image_url"
             name="image_url"
-            type="url" // เปลี่ยน type เป็น url เพื่อการ validation ที่ดีขึ้น
+            type="url"
             value={form.image_url}
             onChange={handleChange}
             aria-describedby="imageurl-error"
@@ -187,7 +187,7 @@ const EditRecipe = ({ user, fetchRecipes, apiBaseUrl }) => {
                 maxHeight: "200px",
                 borderRadius: "8px",
                 border: "1px solid #ccc",
-                objectFit: "cover", // เพิ่ม object-fit
+                objectFit: "cover",
               }}
               onError={(e) => { e.target.style.display = 'none'; /* ซ่อนถ้าโหลดรูปไม่ได้ */ }}
             />
@@ -202,7 +202,7 @@ const EditRecipe = ({ user, fetchRecipes, apiBaseUrl }) => {
             name="ingredients"
             value={form.ingredients}
             onChange={handleChange}
-            rows={5} // เพิ่มจำนวนแถว
+            rows={5}
             required
             aria-describedby="ingredients-error"
           />
@@ -215,7 +215,7 @@ const EditRecipe = ({ user, fetchRecipes, apiBaseUrl }) => {
             name="steps"
             value={form.steps}
             onChange={handleChange}
-            rows={6} // เพิ่มจำนวนแถว
+            rows={6}
             required
             aria-describedby="steps-error"
           />
@@ -247,7 +247,7 @@ const EditRecipe = ({ user, fetchRecipes, apiBaseUrl }) => {
             onChange={handleDifficultyChange}
             isClearable
             placeholder="เลือกระดับความยาก หรือเพิ่มใหม่..."
-            formatCreateLabel={(inputValue) => `เพิ่ม "${inputValue}"`} // ปรับปรุงข้อความตอนสร้างตัวเลือกใหม่
+            formatCreateLabel={(inputValue) => `เพิ่ม "${inputValue}"`}
             aria-describedby="difficulty-error"
           />
         </div>

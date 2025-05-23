@@ -79,7 +79,6 @@ export default function App() {
   const handleLogout = () => {
     localStorage.removeItem('user'); // ลบข้อมูลผู้ใช้ออกจาก localStorage
     setUser(null); // ตั้งค่า user state เป็น null
-    // อาจจะมีการ redirect ไปหน้า login หรือ home page ตามต้องการ
   };
 
 

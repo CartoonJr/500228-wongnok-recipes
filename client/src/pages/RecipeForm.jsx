@@ -69,7 +69,7 @@ const RecipeForm = ({ user, fetchRecipes, apiBaseUrl }) => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // ป้องกันการ refresh หน้าเมื่อ submit ฟอร์ม
     setError(""); // ล้างข้อความข้อผิดพลาดเก่า
-    setIsSubmitting(true); // เริ่มการ submit
+    setIsSubmitting(true);
 
     // ตรวจสอบข้อมูลที่จำเป็น
     if (!form.name || !form.ingredients || !form.steps || !form.duration || !selectedDifficulty) {
@@ -109,7 +109,7 @@ const RecipeForm = ({ user, fetchRecipes, apiBaseUrl }) => {
       setError("ไม่สามารถเชื่อมต่อเซิร์ฟเวอร์เพื่อเพิ่มสูตรได้");
       alert("ไม่สามารถเชื่อมต่อเซิร์ฟเวอร์ได้");
     } finally {
-      setIsSubmitting(false); // สิ้นสุดการ submit
+      setIsSubmitting(false);
     }
   };
 
@@ -135,7 +135,7 @@ const RecipeForm = ({ user, fetchRecipes, apiBaseUrl }) => {
           <label htmlFor="image_url">ลิงก์รูปภาพ (URL):</label>
           <input
             id="image_url"
-            type="url" // ใช้ type="url" เพื่อให้ browser ช่วย validate
+            type="url"
             name="image_url"
             placeholder="เช่น https://example.com/image.jpg"
             value={form.image_url}
@@ -169,7 +169,7 @@ const RecipeForm = ({ user, fetchRecipes, apiBaseUrl }) => {
             placeholder="เช่น&#10;หมูกรอบ 200 กรัม&#10;ใบกะเพรา 1 กำมือ&#10;พริกขี้หนู 5-10 เม็ด"
             value={form.ingredients}
             onChange={handleChange}
-            rows={5} // เพิ่มจำนวนแถว
+            rows={5}
             required
             disabled={isSubmitting}
           />
@@ -182,7 +182,7 @@ const RecipeForm = ({ user, fetchRecipes, apiBaseUrl }) => {
             placeholder="เช่น&#10;1. ตั้งกระทะ ใส่น้ำมันเล็กน้อย&#10;2. ใส่พริกกระเทียมลงไปผัดให้หอม&#10;3. ใส่หมูกรอบ ผัดให้เข้ากัน"
             value={form.steps}
             onChange={handleChange}
-            rows={6} // เพิ่มจำนวนแถว
+            rows={6}
             required
             disabled={isSubmitting}
           />
